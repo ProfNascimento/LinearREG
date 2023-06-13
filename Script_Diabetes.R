@@ -1,7 +1,9 @@
-library(mlbench)
+require(mlbench)
 ## IMPORT
 data(PimaIndiansDiabetes2)
 names(PimaIndiansDiabetes2)
+str(PimaIndiansDiabetes2)
+
 
 Amelia::missmap(PimaIndiansDiabetes2)
 DB=imputeTS::na.mean(PimaIndiansDiabetes2)
@@ -25,7 +27,7 @@ xtab=table(yhat,DB$diabetes)
 
 caret::confusionMatrix(xtab)
 
-# MODEL 2
+# MODEL 2 (OPTIMAL)
 logit_2 <- MASS::stepAIC(logistic_model)
 summary(logit_2)
 
