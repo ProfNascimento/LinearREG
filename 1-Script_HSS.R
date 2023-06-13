@@ -4,7 +4,7 @@
 #----------------------------------------------------------------------------------#
 
 ## DATA IMPORT
-HSS <- read.csv("https://raw.githubusercontent.com/ProfNascimento/LinearREG/main/Data_HSS.csv")
+HSS <- read.csv("https://raw.githubusercontent.com/ProfNascimento/LinearREG/main/1-Data_HSS.csv")
 str(HSS)
 
 summary(HSS)
