@@ -16,6 +16,6 @@ El ejemplo adoptado fue obtenido del repositorio de la Universidad de California
 
 $Y \in \{ 0,1 \}, Y \sim f(Xs)$
 
-donde la función f(.) será la logit, log(p/(1-p)), luego
+donde la función f(.) será la logit, $log(\frac{p}{(1-p)})$, luego
 
 $\mathcal{E}[Y|X_1,\cdots,X_k]= \mathbb{P}(Y=1|X_1,\cdots,X_k) =p=\frac{1}{1+exp(\beta_0+\beta_1 X_1 + \cdots + \beta_k X_k)}$
