@@ -14,7 +14,7 @@ $\mathcal{E}[Y|X_1,\cdots,X_k]=\beta_0+\beta_1 X_1 + \cdots + \beta_k X_k$
 # Regresión Binária
 El ejemplo adoptado fue obtenido del repositorio de la Universidad de California, donde se desea desarollar un modelo probabilístico que relacione con la caracterización de la Diabetes, en la población originaria Pima. 
 
-$Y \in \left{0,1\right}, Y \sim f(Xs)$
+$Y \in \{ 0,1 \}, Y \sim f(Xs)$
 
 donde la función f(.) será la logit, log(p/(1-p)), luego
 
