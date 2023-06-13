@@ -1,5 +1,5 @@
 require(mlbench)
-## IMPORT
+## IMPORT 
 data(PimaIndiansDiabetes2)
 names(PimaIndiansDiabetes2)
 str(PimaIndiansDiabetes2)
