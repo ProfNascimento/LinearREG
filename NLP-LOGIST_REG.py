@@ -38,7 +38,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix(y_test,y_predict)
 
 ## Self-defined threshold
-y_predict_self = [1 if prob > 0.041926 else 0 for prob in y_predict_prob[:,1]]
+y_predict_self = [1 if prob > 0.102232 else 0 for prob in y_predict_prob[:,1]]
 # Model evaluation on accuracy
 confusion_matrix(y_test,y_predict_self)
 

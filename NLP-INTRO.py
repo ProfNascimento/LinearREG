@@ -148,7 +148,7 @@ from wordcloud import WordCloud, STOPWORDS
 stopwords = list(STOPWORDS)
 fieldnames = list(women_clothes_reviews['Class Name'].unique())
 
-def cloud(text, title, stopwords=stopwords, size=size):
+def cloud(text, title, stopwords=stopwords):
     # Setting figure parameters
     mpl.rcParams['figure.figsize']=(10.0,10.0)
     mpl.rcParams['font.size']=12
@@ -160,7 +160,7 @@ def cloud(text, title, stopwords=stopwords, size=size):
                           stopwords=stopwords,
                          ).generate(str(text))
     
-    fig = plt.figure(figsize=size, dpi=80, 
+    fig = plt.figure(figsize=(7,4), dpi=80, 
                      facecolor='k',edgecolor='k')
     plt.imshow(wordcloud,interpolation='bilinear')
     plt.axis('off')
@@ -170,21 +170,18 @@ def cloud(text, title, stopwords=stopwords, size=size):
 
 cloud(text= women_clothes_reviews.Title.astype(str).values,
       title="titles",
-      stopwords= stopwords,
-      size = (7,4))
+      stopwords= stopwords)
 
 # VISUALIZATION MOST FREQ. WORD PER REVIEW CLASS (WORDCLOUD)
 a1 = women_clothes_reviews[women_clothes_reviews['Rating']>=3]
 cloud(text = a1['Final Text'].astype(str).values,
       title ='',
-      stopwords = stopwords,
-      size = (7,4))
+      stopwords = stopwords)
 
 stopwords2 = list(STOPWORDS) + ["dress", "petite","made","will"]
 cloud(text = a1['Final Text'].astype(str).values,
       title ='',
-      stopwords = stopwords2,
-      size = (7,4))
+      stopwords = stopwords2)
 
 a2 = women_clothes_reviews[women_clothes_reviews['Rating']<3]
 cloud(text = a2['Final Text'].astype(str).values,
