@@ -40,3 +40,25 @@ for(i in ncolunas) {
                             prod(dim(r_svd$u[, 1:i])))/prod(dim(red))*
                      100, 2),"%"))
 }
+
+####
+## PCA Visualization (RED COLOR ONLY)
+dim(red)
+
+library(factoextra)
+res.pca <- prcomp(red, scale = TRUE)
+fviz_eig(res.pca, addlabels=TRUE)
+
+# Eigenvalues
+get_eigenvalue(res.pca)
+
+## DESCRIBING THE RESPONSE VARIABLE (Y)
+fviz_pca_biplot(res.pca, repel = TRUE, 
+                select.ind = list(cos2 = 5), # Top 5
+                col.var = "#2E9FDF", # Variables color
+                col.ind = "#696969"  # Individuals color
+)
+
+## Selecting the Principal Components 1 & 2
+res.pca$rotation[,1:2]
+res.pca$x[,1:2]
